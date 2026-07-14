@@ -1,0 +1,334 @@
+/*Reset*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef2f7;
+    color:#333;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/*En-tete*/
+header{
+
+    background:orange;
+    color:white;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+}
+
+header h1{
+
+    margin-bottom:10px;
+
+    font-size:2rem;
+
+}
+
+header p{
+
+    opacity:.9;
+
+}
+
+/*corps principal*/
+main{
+
+    flex:1;
+
+    width:90%;
+    max-width:900px;
+
+    margin:auto;
+
+    padding:40px 0;
+
+}
+
+/*Section de recherche*/
+.search-section{
+
+    margin-bottom:30px;
+
+}
+
+form{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+label{
+
+    width:100%;
+
+    font-weight:bold;
+
+}
+
+input{
+
+    flex:1;
+
+    min-width:250px;
+
+    padding:14px;
+
+    border:2px solid #dcdcdc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    outline:none;
+
+    border-color:rgba(243, 192, 98, 0.918);
+
+}
+
+
+button{
+
+    padding:14px 24px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:orange;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:orangered;
+
+}
+
+/*Message d'erreur*/
+.error{
+
+    margin-top:10px;
+
+    color:#d32f2f;
+
+    font-weight:bold;
+
+}
+
+
+/*Petit boutton tournante*/
+.loading{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin:30px;
+
+}
+
+.spinner{
+
+    width:60px;
+
+    height:60px;
+
+    border:7px solid #ddd;
+
+    border-top:7px solid rgb(199, 129, 0);
+
+    border-radius:50%;
+
+    animation:rotation 1s linear infinite;
+
+    margin-bottom:15px;
+
+}
+
+@keyframes rotation{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*Box de presentation du pays en question*/
+.card{
+
+    background:white;
+    gap: 80px;
+    display:flex;
+    align-items: space-between;
+    padding:60px;
+    max-width: 3000px;
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    animation:fade .6s;
+
+}
+
+.card img{
+
+    width:250px;
+
+    display:block;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    border:1px solid #ddd;
+
+}
+
+.card h2{
+
+    text-align:center;
+
+    color:orange;
+
+    margin-bottom:25px;
+
+}
+
+.card p{
+
+    margin:15px 0;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+}
+
+
+/*Pied de page*/
+footer{
+
+    background:orange;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+
+/*Classe cachee*/
+.hidden{
+
+    display:none;
+
+}
+
+
+/*Animation*/
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*Responsive*/
+
+@media(max-width:768px){
+
+    form{
+
+        flex-direction:column;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+    input{
+
+        width:100%;
+
+    }
+
+    .card{
+
+        flex-direction: column;
+        padding:20px;
+
+    }
+
+    .card img{
+
+        width:170px;
+
+    }
+
+    .card p{
+
+        font-size:16px;
+
+    }
+
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Mondial</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌍 Atlas Mondial LOG3500</h1>
+        <p>Découvrez les informations d'un pays rien qu'en saisissant le nom.</p>
+    </header>
+
+    <main>
+
+        <section class="search-section">
+
+            <form id="countryForm">
+
+                <label for="countryInput">
+                    Nom du pays
+                </label>
+
+                <input
+                    type="text"
+                    id="countryInput"
+                    placeholder="Exemple : Haiti"
+                    aria-describedby="errorMessage">
+
+                <button type="submit">
+                    Rechercher
+                </button>
+
+            </form>
+
+
+            <p id="errorMessage" class="error"></p>
+
+        </section>
+
+
+        <!-- Petit bouton tournante -->
+
+        <section id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <p>Chargement...</p>
+
+        </section>
+
+
+        <!-- Box de presentation du pays -->
+
+        <section id="countryCard" class="card hidden">
+            
+            <div>
+                <img
+                id="flag"
+                src=""
+                alt="">
+
+                <h2 id="countryName"></h2>
+            </div>
+            <div>
+                <p>
+                    <strong>🏛 Capitale :</strong>
+                    <span id="capital"></span>
+                </p>
+
+                <p>
+                    <strong>👥 Population :</strong>
+                    <span id="population"></span>
+                </p>
+
+                <p>
+                    <strong>🌎 Région :</strong>
+                    <span id="region"></span>
+                </p>
+
+                <p>
+                    <strong>💰 Monnaie :</strong>
+                    <span id="currency"></span>
+                </p>
+
+                <p>
+                    <strong>🗣 Langues :</strong>
+                    <span id="languages"></span>
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Pied de page -->
+
+    <footer>
+
+        <p>
+            LOG3500 - Devoir 2 | Atlas Mondial Interactif
+        </p>
+
+    </footer>
+
+
+    <!-- Script JavaScript -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
