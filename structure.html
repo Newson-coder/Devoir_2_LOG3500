@@ -17,11 +17,12 @@
 
     <main>
 
-        <section class="search-section">
+        <div class="search-section">
 
             <form id="countryForm">
 
-                <label for="countryInput">
+                <div>
+                    <label for="countryInput">
                     Nom du pays
                 </label>
 
@@ -30,6 +31,7 @@
                     id="countryInput"
                     placeholder="Exemple : Haiti"
                     aria-describedby="errorMessage">
+                </div>
 
                 <button type="submit">
                     Rechercher
@@ -40,23 +42,23 @@
 
             <p id="errorMessage" class="error"></p>
 
-        </section>
+        </div>
 
 
         <!-- Petit bouton tournante -->
 
-        <section id="loading" class="loading hidden">
+        <div id="loading" class="loading hidden">
 
             <div class="spinner"></div>
 
             <p>Chargement...</p>
 
-        </section>
+        </div>
 
 
         <!-- Box de presentation du pays -->
 
-        <section id="countryCard" class="card hidden">
+        <div id="countryCard" class="card hidden">
             
             <div>
                 <img
@@ -93,7 +95,7 @@
                 </p>
             </div>
 
-        </section>
+        </div>
 
     </main>
 
